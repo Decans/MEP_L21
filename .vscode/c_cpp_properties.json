@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Keil_v5/ARM/ARMCLANG/include/**",
+                "C:/Users/zacharyreinke/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/**",
+                "C:/Users/zacharyreinke/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/**"
+            ],
+            "defines": [
+                // "_DEBUG",
+                // "UNICODE",
+                // "_UNICODE",
+                // "USE_HAL_DRIVER",
+                "STM32F407xx"
+            ],
+            "compilerArgs": [
+                "-xc",
+                "-std=c99", 
+                "--target=arm-arm-none-eabi",
+                "-mcpu=cortex-m4",
+                "-mfpu=fpv4-sp-d16",
+                "-mfloat-abi=hard"
+            ],
+            "compilerPath": "c:\\Keil_v5\\ARM\\ARMCLANG\\bin\\armclang.exe"
+        }
+    ],
+    "version": 4
+}
