@@ -13,7 +13,7 @@ void BSP_SysInit(void)
     SystemCoreClockUpdate();
 	SysTick_Config( SystemCoreClock / BSP_TICKS_PER_SEC);
 
-	__enable_irq();
+	__enable_irq(); // QUESTION: Is this needed?
 
 	// Enable the GPIOD Peripheral
 	RCC->AHB1ENR = RCC_AHB1ENR_GPIODEN;
@@ -34,16 +34,6 @@ void BSP_SysInit(void)
 	GPIOD->MODER &= ~GPIO_MODER_MODER15;
 	GPIOD->MODER |= GPIO_MODER_MODER15_0;
 }
-
-// void BSP_LED_On(uint32_t LED_Msk)
-// {
-//     GPIOD->ODR |= (LED_Msk);
-// }
-
-// void BSP_LED_Off(uint32_t LED_Msk)
-// {
-//     GPIOD->ODR &= ~(LED_Msk);
-// }
 
 uint32_t BSP_tickCtr(void)
 {
@@ -70,7 +60,7 @@ void BusFault_Handler(void)
 {
     while (1)
     {
-        /* code */
+        /* Infinite Loop */
     }
 }
 
@@ -78,6 +68,6 @@ void HardFault_Handler(void)
 {
     while (1)
     {
-        /* code */
+        /* Infinite Loop */
     }
 }

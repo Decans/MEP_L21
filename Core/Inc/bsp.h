@@ -14,9 +14,6 @@
 #define BSP_LED_SET(LED_MSK)        (GPIOD->ODR |= (LED_MSK))
 #define BSP_LED_RESET(LED_MSK)      (GPIOD->ODR &= ~(LED_MSK))
 
-// void BSP_LED_On(uint32_t LED_Msk);
-// void BSP_LED_Off(uint32_t LED_Msk);
-
 /// @brief Application initializer
 /// @param  None
 void BSP_SysInit(void);
