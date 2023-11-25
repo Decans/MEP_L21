@@ -464,6 +464,11 @@
               <FileType>1</FileType>
               <FilePath>.\Core\Src\bsp.c</FilePath>
             </File>
+            <File>
+              <FileName>miros.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Core\Src\miros.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

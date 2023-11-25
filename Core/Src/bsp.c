@@ -13,6 +13,9 @@ void BSP_SysInit(void)
     SystemCoreClockUpdate();
 	SysTick_Config( SystemCoreClock / BSP_TICKS_PER_SEC);
 
+    // Swap priorities to ensure PendSV does not preempt SysTick
+    NVIC_SetPriority(SysTick_IRQn, 0U);
+
 	__enable_irq(); // QUESTION: Is this needed?
 
 	// Enable the GPIOD Peripheral
