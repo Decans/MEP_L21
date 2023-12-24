@@ -17,6 +17,7 @@ void OSThread_start(
     // Set sp to end of stack memory
     uint32_t *sp = (uint32_t *)((uint32_t)stkSto + stkSize);
 
+	// The stack grows from high address to low address
     // Initialize stack (with FPU)
 	*(--sp) = 0x00000000U; // FPSCR
 	*(--sp) = 0x80003070U; // S15
